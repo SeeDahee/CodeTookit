@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+<div class = "container">
+{% block content %}
+
+        {% for sketches in object_list %}
+            <h1><a href = "{% url 'blog_detail' sketches.pk %}">{{sketches.title}}</a></h1>
+            <p>{{sketches.body}}</p>
+
+
+        {% endfor %}
+
+</div>
+
+
+{% endblock %}
